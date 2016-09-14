@@ -21,7 +21,24 @@ public class RectangleTest {
   }
   @Test
   public void isSquare_testsToMAkeSureRectangleIsNotASquare_true() {
-  Rectangle testRectangle = new Rectangle(5, 5);
-  assertEquals(true, testRectangle.isSquare());
-}
+    Rectangle testRectangle = new Rectangle(5, 5);
+    assertEquals(true, testRectangle.isSquare());
+  }
+  @Test
+  public void areacalc_testsToFindTheArea_25() {
+    Rectangle testRectangle = new Rectangle(5, 5);
+    assertEquals(25, testRectangle.area());
+  }
+  @Test
+  public void all_returnsAllInstancesOfRectangle_true() {
+    Rectangle firstRectangle = new Rectangle(10, 20);
+    Rectangle secondRectangle = new Rectangle(5, 5);
+    assertTrue(Rectangle.all().contains(firstRectangle));
+    assertTrue(Rectangle.all().contains(secondRectangle));
+  }
+  @Test
+  public void area_returnsTheAreaOfTheRectangle_450() {
+    Rectangle testRectangle = new Rectangle(15, 30);
+    assertEquals(450, testRectangle.area());
+  }
 }
